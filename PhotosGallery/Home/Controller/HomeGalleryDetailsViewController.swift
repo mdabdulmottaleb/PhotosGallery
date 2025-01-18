@@ -30,7 +30,7 @@ class HomeGalleryDetailsViewController: UIViewController {
             let imageName = "photo_\(photo.id)"
             updateDownloadedImageDisplay(for: imageName)
         }
-        
+        localImageTapGesture()
     }
     
     private func loadImage() {
@@ -79,7 +79,36 @@ class HomeGalleryDetailsViewController: UIViewController {
             }
         }
     }
-    
+    //Local Image tapped
+    private func localImageTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showImageFullScreen))
+        showDownloadedImage.isUserInteractionEnabled = true
+        showDownloadedImage.addGestureRecognizer(tapGesture)
+    }
+    // full scren and dismis
+    @objc private func showImageFullScreen() {
+        guard let image = showDownloadedImage.image else { return }
+        
+        let fullScreenVC = UIViewController()
+        fullScreenVC.view.backgroundColor = .black
+        fullScreenVC.modalPresentationStyle = .fullScreen
+        
+        let fullScreenImageView = UIImageView(image: image)
+        fullScreenImageView.contentMode = .scaleAspectFit
+        fullScreenImageView.frame = fullScreenVC.view.frame
+        fullScreenImageView.isUserInteractionEnabled = true
+   
+        let dismissGesture = UITapGestureRecognizer(target: self, action: #selector(dismissFullScreenImage))
+        fullScreenImageView.addGestureRecognizer(dismissGesture)
+        
+        fullScreenVC.view.addSubview(fullScreenImageView)
+        self.present(fullScreenVC, animated: true, completion: nil)
+    }
+
+    @objc private func dismissFullScreenImage(_ sender: UITapGestureRecognizer) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
     
     @IBAction func downloadImage(_ sender: Any) {
         guard let image = imageView.image, let photo = photo else {
