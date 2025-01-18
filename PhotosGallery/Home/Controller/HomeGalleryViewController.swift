@@ -75,6 +75,15 @@ extension HomeGalleryViewController: UICollectionViewDelegate, UICollectionViewD
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            let selectedPhoto = photos[indexPath.item]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HomeGalleryDetailsViewController") as? HomeGalleryDetailsViewController
+        vc?.photo = selectedPhoto
+        navigationController?.pushViewController(vc!, animated: true)
+        }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let position = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height

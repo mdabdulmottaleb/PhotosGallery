@@ -59,6 +59,11 @@
 		CE73A2222D3B8B0A00FF4EB3 /* HomeGalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73A2212D3B8B0A00FF4EB3 /* HomeGalleryModel.swift */; };
 		CE73A2242D3B932000FF4EB3 /* HomeGalleryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73A2232D3B932000FF4EB3 /* HomeGalleryService.swift */; };
 		CE73A2262D3B93E600FF4EB3 /* HomeGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73A2252D3B93E600FF4EB3 /* HomeGalleryViewModel.swift */; };
+		CE73A2282D3BCE3D00FF4EB3 /* HomeGalleryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73A2272D3BCE3D00FF4EB3 /* HomeGalleryDetailsViewController.swift */; };
+		CE73A22A2D3BD0E300FF4EB3 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73A2292D3BD0E300FF4EB3 /* LocalFileManager.swift */; };
+		CE73A22C2D3BD19B00FF4EB3 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73A22B2D3BD19B00FF4EB3 /* UIImageViewExtension.swift */; };
+		CE73A22E2D3BD8B000FF4EB3 /* ToastShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73A22D2D3BD8B000FF4EB3 /* ToastShowing.swift */; };
+		CE73A2302D3BE01200FF4EB3 /* InfoViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73A22F2D3BE01200FF4EB3 /* InfoViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +119,11 @@
 		CE73A2212D3B8B0A00FF4EB3 /* HomeGalleryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGalleryModel.swift; sourceTree = "<group>"; };
 		CE73A2232D3B932000FF4EB3 /* HomeGalleryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGalleryService.swift; sourceTree = "<group>"; };
 		CE73A2252D3B93E600FF4EB3 /* HomeGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGalleryViewModel.swift; sourceTree = "<group>"; };
+		CE73A2272D3BCE3D00FF4EB3 /* HomeGalleryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGalleryDetailsViewController.swift; sourceTree = "<group>"; };
+		CE73A2292D3BD0E300FF4EB3 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
+		CE73A22B2D3BD19B00FF4EB3 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		CE73A22D2D3BD8B000FF4EB3 /* ToastShowing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastShowing.swift; sourceTree = "<group>"; };
+		CE73A22F2D3BE01200FF4EB3 /* InfoViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				CE73A1C22D3B774000FF4EB3 /* HomeGalleryViewController.swift */,
+				CE73A2272D3BCE3D00FF4EB3 /* HomeGalleryDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -244,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				CE73A1D12D3B7E0E00FF4EB3 /* UICollectionViewExtension.swift */,
+				CE73A22B2D3BD19B00FF4EB3 /* UIImageViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -251,6 +263,9 @@
 		CE73A1C02D3B768500FF4EB3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CE73A2292D3BD0E300FF4EB3 /* LocalFileManager.swift */,
+				CE73A22D2D3BD8B000FF4EB3 /* ToastShowing.swift */,
+				CE73A22F2D3BE01200FF4EB3 /* InfoViewPresenter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -421,17 +436,22 @@
 				CE73A1F92D3B897600FF4EB3 /* RequestInterceptor.swift in Sources */,
 				CE73A1CA2D3B7BCD00FF4EB3 /* ReusableView.swift in Sources */,
 				CE73A1FC2D3B897600FF4EB3 /* URLSessionConfiguration+Alamofire.swift in Sources */,
+				CE73A22E2D3BD8B000FF4EB3 /* ToastShowing.swift in Sources */,
 				CE73A2072D3B897600FF4EB3 /* AFError.swift in Sources */,
 				CE73A21A2D3B897600FF4EB3 /* ResponseSerialization.swift in Sources */,
 				CE73A1F82D3B897600FF4EB3 /* MultipartFormData.swift in Sources */,
+				CE73A22C2D3BD19B00FF4EB3 /* UIImageViewExtension.swift in Sources */,
 				CE73A20D2D3B897600FF4EB3 /* URLRequest+Alamofire.swift in Sources */,
+				CE73A22A2D3BD0E300FF4EB3 /* LocalFileManager.swift in Sources */,
 				CE73A2092D3B897600FF4EB3 /* URLEncodedFormEncoder.swift in Sources */,
 				CE73A2262D3B93E600FF4EB3 /* HomeGalleryViewModel.swift in Sources */,
 				CE73A1FF2D3B897600FF4EB3 /* Concurrency.swift in Sources */,
 				CE73A1D22D3B7E0E00FF4EB3 /* UICollectionViewExtension.swift in Sources */,
 				CE73A1FD2D3B897600FF4EB3 /* Session.swift in Sources */,
+				CE73A2302D3BE01200FF4EB3 /* InfoViewPresenter.swift in Sources */,
 				CE73A2062D3B897600FF4EB3 /* ServerTrustEvaluation.swift in Sources */,
 				CE73A2102D3B897600FF4EB3 /* Validation.swift in Sources */,
+				CE73A2282D3BCE3D00FF4EB3 /* HomeGalleryDetailsViewController.swift in Sources */,
 				CE73A1FB2D3B897600FF4EB3 /* ParameterEncoder.swift in Sources */,
 				CE73A2152D3B897600FF4EB3 /* Result+Alamofire.swift in Sources */,
 				CE73A2112D3B897600FF4EB3 /* Notifications.swift in Sources */,
