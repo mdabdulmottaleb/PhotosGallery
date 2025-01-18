@@ -11,27 +11,39 @@ class HomeGalleryDetailsViewController: UIViewController {
     
     var photo: Photo?
     
+    @IBOutlet weak var textForServerImg: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var showDownloadedImage: UIImageView!
     @IBOutlet weak var localImageGettingTxt: UILabel!
+    @IBOutlet weak var downloadImgBtn: UIButton!
     @IBOutlet weak var deleteImgBtn: UIButton!
-    
+    @IBOutlet weak var shareImgBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadImage()
         setUpNavBar()
+        downloadImgBtn.isHidden = true
+        shareImgBtn.isHidden = true
+        deleteImgBtn.isHidden = true
         if let photo = photo {
             let imageName = "photo_\(photo.id)"
             updateDownloadedImageDisplay(for: imageName)
         }
-        deleteImgBtn.isHidden = true
+        
     }
     
     private func loadImage() {
         guard let photo = photo else { return }
         if let url = URL(string: photo.src.original) {
             imageView.load(url: url)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+                self.textForServerImg.text = "Photo from Server"
+                self.downloadImgBtn.isHidden = false
+            }
+            
+            
         }
     }
     
@@ -100,6 +112,14 @@ class HomeGalleryDetailsViewController: UIViewController {
         Toast.shared.show(message: "Photo Deleted successfully", in: self, backgroundColor: .red)
     }
     
+    
+    @IBAction func shareImgBtn(_ sender: Any) {
+        
+        guard let photo = photo else { return }
+        let activityVC = UIActivityViewController(activityItems: [photo.src.original], applicationActivities: nil)
+        self.present(activityVC, animated: true)
+    }
+    
     private func fetchImageData(from url: URL, completion: @escaping (String) -> Void) {
         DispatchQueue.global(qos: .background).async {
             do {
@@ -118,11 +138,14 @@ class HomeGalleryDetailsViewController: UIViewController {
         if let savedImage = LocalFileManager.instance.fetchImageFromDirectory(imageName: imageName) {
             showDownloadedImage.image = savedImage
             localImageGettingTxt.text = "Photo from locally"
+            shareImgBtn.isHidden = false
             deleteImgBtn.isHidden = false
+            
             debugPrint("Loaded image: \(imageName)")
         } else {
             showDownloadedImage.image = nil // Clear the UIImageView if no image exists
             localImageGettingTxt.text = ""
+            shareImgBtn.isHidden = true
             debugPrint("No image found for name: \(imageName)")
         }
     }

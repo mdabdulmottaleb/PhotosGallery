@@ -92,7 +92,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UpM-NT-141">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo From Server" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGJ-jI-6OZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGJ-jI-6OZ">
                                         <rect key="frame" x="8" y="4" width="369" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="7s5-fF-fIp"/>
@@ -147,6 +147,20 @@
                                             <action selector="deleteImage:" destination="isg-PS-mOg" eventType="touchUpInside" id="nEW-CT-Fjf"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A35-ca-fmf">
+                                        <rect key="frame" x="32" y="711" width="150" height="32"/>
+                                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="OcU-oY-DfC"/>
+                                            <constraint firstAttribute="width" constant="150" id="Wb3-84-w0T"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Share Image"/>
+                                        <connections>
+                                            <action selector="shareImgBtn:" destination="isg-PS-mOg" eventType="touchUpInside" id="Bs0-cp-wtj"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -161,10 +175,12 @@
                                     <constraint firstItem="ZWI-tG-bfB" firstAttribute="top" secondItem="Apo-Qd-dfm" secondAttribute="bottom" constant="8" id="L7Y-im-NEq"/>
                                     <constraint firstAttribute="trailing" secondItem="hun-CE-5Ey" secondAttribute="trailing" constant="32" id="NX9-98-axM"/>
                                     <constraint firstItem="Apo-Qd-dfm" firstAttribute="centerX" secondItem="UpM-NT-141" secondAttribute="centerX" id="WLq-KJ-HfQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="A35-ca-fmf" secondAttribute="bottom" constant="16" id="aba-Cr-qmS"/>
                                     <constraint firstItem="Apo-Qd-dfm" firstAttribute="top" secondItem="FGJ-jI-6OZ" secondAttribute="bottom" constant="4" id="gPW-8t-dy0"/>
                                     <constraint firstItem="FGJ-jI-6OZ" firstAttribute="leading" secondItem="UpM-NT-141" secondAttribute="leading" constant="8" id="hhN-23-hzP"/>
                                     <constraint firstItem="FGJ-jI-6OZ" firstAttribute="top" secondItem="UpM-NT-141" secondAttribute="top" constant="4" id="mTv-bQ-a12"/>
                                     <constraint firstItem="bbh-as-I6t" firstAttribute="top" secondItem="2DM-3p-Eoc" secondAttribute="bottom" constant="8" id="s7P-dm-ycU"/>
+                                    <constraint firstItem="A35-ca-fmf" firstAttribute="leading" secondItem="UpM-NT-141" secondAttribute="leading" constant="32" id="tyY-Rj-VsP"/>
                                     <constraint firstAttribute="trailing" secondItem="FGJ-jI-6OZ" secondAttribute="trailing" constant="16" id="ukB-2Y-jrm"/>
                                     <constraint firstItem="bbh-as-I6t" firstAttribute="leading" secondItem="UpM-NT-141" secondAttribute="leading" constant="32" id="vwU-45-FHS"/>
                                     <constraint firstAttribute="trailing" secondItem="bbh-as-I6t" secondAttribute="trailing" constant="32" id="xFW-7u-5rK"/>
@@ -182,9 +198,12 @@
                     </view>
                     <connections>
                         <outlet property="deleteImgBtn" destination="hun-CE-5Ey" id="AKv-6b-L73"/>
+                        <outlet property="downloadImgBtn" destination="ZWI-tG-bfB" id="wLX-pA-XSQ"/>
                         <outlet property="imageView" destination="Apo-Qd-dfm" id="pJ7-gY-Q5h"/>
                         <outlet property="localImageGettingTxt" destination="2DM-3p-Eoc" id="7KJ-Yg-DI5"/>
+                        <outlet property="shareImgBtn" destination="A35-ca-fmf" id="Drd-zr-Rpi"/>
                         <outlet property="showDownloadedImage" destination="bbh-as-I6t" id="KAk-RI-rIC"/>
+                        <outlet property="textForServerImg" destination="FGJ-jI-6OZ" id="Hgd-PI-AkE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tsn-sU-CNX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -216,6 +235,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
