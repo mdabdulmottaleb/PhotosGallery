@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		CE73A1A32D3B5E6E00FF4EB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73A1A22D3B5E6E00FF4EB3 /* AppDelegate.swift */; };
 		CE73A1A52D3B5E6E00FF4EB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73A1A42D3B5E6E00FF4EB3 /* SceneDelegate.swift */; };
-		CE73A1A72D3B5E6E00FF4EB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73A1A62D3B5E6E00FF4EB3 /* ViewController.swift */; };
 		CE73A1AA2D3B5E6E00FF4EB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE73A1A82D3B5E6E00FF4EB3 /* Main.storyboard */; };
 		CE73A1AC2D3B5E7100FF4EB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE73A1AB2D3B5E7100FF4EB3 /* Assets.xcassets */; };
 		CE73A1AF2D3B5E7100FF4EB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE73A1AD2D3B5E7100FF4EB3 /* LaunchScreen.storyboard */; };
+		CE73A1C32D3B774000FF4EB3 /* HomeGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73A1C22D3B774000FF4EB3 /* HomeGalleryViewController.swift */; };
+		CE73A1C72D3B7A2300FF4EB3 /* HomeGalleryLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73A1C62D3B7A2300FF4EB3 /* HomeGalleryLayout.swift */; };
+		CE73A1CA2D3B7BCD00FF4EB3 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73A1C92D3B7BCD00FF4EB3 /* ReusableView.swift */; };
+		CE73A1CF2D3B7D2000FF4EB3 /* HomeGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73A1CD2D3B7D2000FF4EB3 /* HomeGalleryCell.swift */; };
+		CE73A1D02D3B7D2000FF4EB3 /* HomeGalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE73A1CE2D3B7D2000FF4EB3 /* HomeGalleryCell.xib */; };
+		CE73A1D22D3B7E0E00FF4EB3 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73A1D12D3B7E0E00FF4EB3 /* UICollectionViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE73A19F2D3B5E6E00FF4EB3 /* PhotosGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotosGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE73A1A22D3B5E6E00FF4EB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE73A1A42D3B5E6E00FF4EB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE73A1A62D3B5E6E00FF4EB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE73A1A92D3B5E6E00FF4EB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE73A1AB2D3B5E7100FF4EB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE73A1AE2D3B5E7100FF4EB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE73A1B02D3B5E7100FF4EB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE73A1C22D3B774000FF4EB3 /* HomeGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGalleryViewController.swift; sourceTree = "<group>"; };
+		CE73A1C62D3B7A2300FF4EB3 /* HomeGalleryLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGalleryLayout.swift; sourceTree = "<group>"; };
+		CE73A1C92D3B7BCD00FF4EB3 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		CE73A1CD2D3B7D2000FF4EB3 /* HomeGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGalleryCell.swift; sourceTree = "<group>"; };
+		CE73A1CE2D3B7D2000FF4EB3 /* HomeGalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeGalleryCell.xib; sourceTree = "<group>"; };
+		CE73A1D12D3B7E0E00FF4EB3 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,132 @@
 		CE73A1A12D3B5E6E00FF4EB3 /* PhotosGallery */ = {
 			isa = PBXGroup;
 			children = (
-				CE73A1A22D3B5E6E00FF4EB3 /* AppDelegate.swift */,
-				CE73A1A42D3B5E6E00FF4EB3 /* SceneDelegate.swift */,
-				CE73A1A62D3B5E6E00FF4EB3 /* ViewController.swift */,
-				CE73A1A82D3B5E6E00FF4EB3 /* Main.storyboard */,
-				CE73A1AB2D3B5E7100FF4EB3 /* Assets.xcassets */,
-				CE73A1AD2D3B5E7100FF4EB3 /* LaunchScreen.storyboard */,
+				CE73A1B62D3B744B00FF4EB3 /* App */,
+				CE73A1B92D3B755400FF4EB3 /* Onboarding */,
+				CE73A1C82D3B7B9C00FF4EB3 /* ReusableView */,
+				CE73A1B72D3B749300FF4EB3 /* Home */,
+				CE73A1B82D3B74EE00FF4EB3 /* Support Files */,
+				CE73A1BF2D3B765C00FF4EB3 /* Extensions */,
+				CE73A1C02D3B768500FF4EB3 /* Utils */,
 				CE73A1B02D3B5E7100FF4EB3 /* Info.plist */,
+				CE73A1C12D3B769900FF4EB3 /* Library */,
 			);
 			path = PhotosGallery;
+			sourceTree = "<group>";
+		};
+		CE73A1B62D3B744B00FF4EB3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CE73A1A22D3B5E6E00FF4EB3 /* AppDelegate.swift */,
+				CE73A1A42D3B5E6E00FF4EB3 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CE73A1B72D3B749300FF4EB3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CE73A1BE2D3B75EC00FF4EB3 /* Storyboard */,
+				CE73A1CC2D3B7C6E00FF4EB3 /* View */,
+				CE73A1BD2D3B75DD00FF4EB3 /* Controller */,
+				CE73A1BC2D3B75D000FF4EB3 /* ViewModel */,
+				CE73A1BB2D3B75C200FF4EB3 /* Service */,
+				CE73A1BA2D3B75B700FF4EB3 /* Model */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CE73A1B82D3B74EE00FF4EB3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE73A1AB2D3B5E7100FF4EB3 /* Assets.xcassets */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		CE73A1B92D3B755400FF4EB3 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				CE73A1AD2D3B5E7100FF4EB3 /* LaunchScreen.storyboard */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		CE73A1BA2D3B75B700FF4EB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE73A1BB2D3B75C200FF4EB3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CE73A1BC2D3B75D000FF4EB3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE73A1C62D3B7A2300FF4EB3 /* HomeGalleryLayout.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE73A1BD2D3B75DD00FF4EB3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE73A1C22D3B774000FF4EB3 /* HomeGalleryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE73A1BE2D3B75EC00FF4EB3 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CE73A1A82D3B5E6E00FF4EB3 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		CE73A1BF2D3B765C00FF4EB3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE73A1D12D3B7E0E00FF4EB3 /* UICollectionViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE73A1C02D3B768500FF4EB3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CE73A1C12D3B769900FF4EB3 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		CE73A1C82D3B7B9C00FF4EB3 /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				CE73A1C92D3B7BCD00FF4EB3 /* ReusableView.swift */,
+			);
+			path = ReusableView;
+			sourceTree = "<group>";
+		};
+		CE73A1CC2D3B7C6E00FF4EB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE73A1CD2D3B7D2000FF4EB3 /* HomeGalleryCell.swift */,
+				CE73A1CE2D3B7D2000FF4EB3 /* HomeGalleryCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE73A1AF2D3B5E7100FF4EB3 /* LaunchScreen.storyboard in Resources */,
+				CE73A1D02D3B7D2000FF4EB3 /* HomeGalleryCell.xib in Resources */,
 				CE73A1AC2D3B5E7100FF4EB3 /* Assets.xcassets in Resources */,
 				CE73A1AA2D3B5E6E00FF4EB3 /* Main.storyboard in Resources */,
 			);
@@ -138,9 +266,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE73A1A72D3B5E6E00FF4EB3 /* ViewController.swift in Sources */,
 				CE73A1A32D3B5E6E00FF4EB3 /* AppDelegate.swift in Sources */,
+				CE73A1CA2D3B7BCD00FF4EB3 /* ReusableView.swift in Sources */,
+				CE73A1D22D3B7E0E00FF4EB3 /* UICollectionViewExtension.swift in Sources */,
+				CE73A1C32D3B774000FF4EB3 /* HomeGalleryViewController.swift in Sources */,
 				CE73A1A52D3B5E6E00FF4EB3 /* SceneDelegate.swift in Sources */,
+				CE73A1C72D3B7A2300FF4EB3 /* HomeGalleryLayout.swift in Sources */,
+				CE73A1CF2D3B7D2000FF4EB3 /* HomeGalleryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

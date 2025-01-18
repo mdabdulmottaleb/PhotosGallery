@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  PhotosGallery
 //
-//  Created by MacBook Pro on 18/1/25.
+//  Created by Md Abdul Mottaleb on 18/1/25.
 //
 
 import UIKit
