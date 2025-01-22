@@ -71,7 +71,7 @@ extension HomeGalleryViewController: UICollectionViewDelegate, UICollectionViewD
         
         let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as HomeGalleryCell
         
-        cell.setSDImage(urlString: photos[indexPath.item].src.original, placeholderImageName: "")
+        cell.setSDImage(urlString: photos[indexPath.item].src.small, placeholderImageName: "")
         
         return cell
     }

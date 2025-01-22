@@ -35,11 +35,11 @@ class HomeGalleryDetailsViewController: UIViewController {
     
     private func loadImage() {
         guard let photo = photo else { return }
-        if let url = URL(string: photo.src.original) {
+        if let url = URL(string: photo.src.large) {
             imageView.load(url: url)
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3){
-                self.textForServerImg.text = "Photo from Server"
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                self.textForServerImg.text = "Photo from Array"
                 self.downloadImgBtn.isHidden = false
             }
             
@@ -61,7 +61,7 @@ class HomeGalleryDetailsViewController: UIViewController {
         guard let photo = photo else { return }
         
         // Fetch image data size asynchronously
-        if let imageURL = URL(string: photo.src.original) {
+        if let imageURL = URL(string: photo.src.small) {
             fetchImageData(from: imageURL) { [weak self] dataSize in
                 guard let self = self else { return }
                 
@@ -72,7 +72,7 @@ class HomeGalleryDetailsViewController: UIViewController {
                         image: self.imageView.image,
                         photographer: "Photographer: \(photo.photographer)",
                         dimensions: "Dimensions: \(photo.width)x\(photo.height)",
-                        originalURL: "Original URL: \(photo.src.original)",
+                        originalURL: "small URL: \(photo.src.original)",
                         size: "Size: \(dataSize)"
                     )
                 }
